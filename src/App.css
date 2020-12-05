@@ -6,17 +6,36 @@
   align-items: center;
   justify-content: center;
 }
-.shark-container{
+.shark-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.shark-right{
-  transform: rotateY(180deg)
+.shark-percussion {
 }
-footer{
+.shark-ooh {
+}
+
+
+footer {
   position: fixed;
-  bottom:0;
+  bottom: 0;
   display: inline-flex;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(0%, -15%, 0);
+  }
+  100% {
+    transform: translate3d(0, -30%, 0%);
+  }
+}
+.jump {
+  transform-origin: 50% 50%;
+  animation: jump 0.5s linear alternate infinite;
 }
