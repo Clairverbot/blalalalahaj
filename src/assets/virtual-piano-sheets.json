@@ -1,0 +1,17 @@
+[
+  {
+    "name": "--Choose a song (if you want to)--",
+    "sheet": "--music sheet goes here--<br/>PS: hit the spacebar for some drums 🥁"
+  },
+  {
+    "name": "Jingle Bells",
+    "sheet": "o f d s o  |  o f d s p  |  <br/>p g f d a  |  <br/>h h g d f  |  o f d s o  |  <br/>o f d s p  |  <br/>p g f d h h h h j h g d s  |  [hg]  |  <br/>f f f  |  f f f  |  f h s d f  |  <br/>g g g  |  g f f  |  f d d f d  |  [hg]  |  <br/>f f f  |  f f f  |  f h s d f  |  <br/>g g g  |  g f f  |  h h g d s"
+  },
+  {
+    "name": "Silent Night",
+    "sheet": "opou  |  opou  |  <br/>dda  |  sso  |  <br/>ppsap  |  opou  |  <br/>ppsap  |  opou  |  <br/>ddgdasf  |  <br/>souoiyt"
+  },
+  {"name":"We Wish You a Merry Christmas",
+    "sheet":"o|[s8]|s d s a [qp]|p|p|[d9]|d f d s [wa]|o|o|[f0]|f g f d [se]|p|[o0] o [qp]|d|[wa]|[s8]||o|[s8]|s d s a [qp]|p|p|[d9]|d f d s [wa]|o|o|[f0]|f g f d [se]|p|[o0] o [qp]|d|[wa]|[s8]||o|[s8]|s|[s0]|[wa]||a|[s9]|a|p|[wo]||d|[f8]|d d s s [h0]|o|o o [qp]|d|[wa]|[s8]"
+}
+]

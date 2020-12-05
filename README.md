@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Blalalalahaj
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![banner](./src/assets/readme_banner.png)
+
+Blahaj loves to sing! The Blahaj choir team will be singing for you this christmas 🦈🎶
+
+Try it out at: [https://blalalalahaj.co](blalalalahaj.co)
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn install`
+Install the required stuff
 
 ### `yarn start`
 
@@ -13,11 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -29,42 +31,32 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Inspiration
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I love playing [Virtual Piano](http://recursivearts.com/virtual-piano/), and had always wanted to create something similar. I also think that sharks are awesome singers (e.g. the viral baby shark). Thus, I have recruited 6 blahajs (4 vocalist, 2 percussionist, all from [this telegram sticker pack](https://tlgrm.eu/stickers/UPOROTAYAIKEA)) to perform for us during this festive season.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## What it does
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+It listens to keypresses and sings, following the virtual piano keymapping. So you can practice your typing skills with blalalalahaj!
+This doesn't work on phones as you'll need to type on a keyboard!!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How I built it
 
-## Learn More
+Using ReactJS and midi-sounds-react
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Challenges I ran into
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Choosing the right voice for Blahaj
 
-### Code Splitting
+## Accomplishments that we're proud of
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I'm genuinely proud of building something that is purely for fun. It might be a simple project but it rekindled my passion for web development. Also, I am proud that I'm able to build this in a short timeframe.
 
-### Analyzing the Bundle Size
+## What we learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Hosting (I've never hosted anything without my friend's help, but I did it this time yay)
 
-### Making a Progressive Web App
+## What's next for Blalalalahaj
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Include touch typing tutorials! "Learn how to type while watching Blahajes dance"
+Also, I'll be making omatatatone, virtual kalimba and more fun stuff

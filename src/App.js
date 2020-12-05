@@ -1,10 +1,8 @@
 import { Component } from "react";
 import MIDISounds from "midi-sounds-react";
 import "./App.css";
-import blahaj_percussion from "./assets/blahaj-percussion.png";
-import blahaj_percussion_right from "./assets/blahaj-percussion-right.png";
-import blahaj_ooh from "./assets/blahaj-ooh.png";
-import blahaj_ooh_right from "./assets/blahaj-ooh-right.png";
+import Sharks from "./components/sharks";
+import virtual_piano_sheets from "./assets/virtual-piano-sheets.json";
 
 class App extends Component {
   constructor(props) {
@@ -12,6 +10,7 @@ class App extends Component {
     this.midiNotes = [];
     this.state = {
       status: "?",
+      selectValue: 0,
     };
   }
   componentDidMount() {
@@ -19,28 +18,27 @@ class App extends Component {
     document.addEventListener("keydown", this.handleKeyDown.bind(this));
   }
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
+    document.removeEventListener("keydown", this.handleKeyDown.bind(this));
   }
   handleKeyDown(e) {
     if (e.keyCode >= 49 && e.keyCode <= 57) {
-      console.log(this.calculateNote(String.fromCharCode(e.keyCode)));
       this.midiSounds.playChordNow(
         598,
         [this.calculateNote(parseInt(String.fromCharCode(e.keyCode)))],
-        0.3
+        0.25
       );
       this.animateShark("shark-ooh", 3);
     } else if (e.keyCode === 48) {
-      this.midiSounds.playChordNow(598, [42], 0.3);
+      this.midiSounds.playChordNow(598, [this.calculateNote(10)], 0.25);
       this.animateShark("shark-ooh", 3);
     } else if (e.keyCode >= 65 && e.keyCode <= 90) {
       let char_arr = "qwertyuiopasdfghjklzxcvbnm".split("");
       let pos =
         char_arr.indexOf(String.fromCharCode(e.keyCode).toLowerCase()) + 11;
-      this.midiSounds.playChordNow(598, [this.calculateNote(pos)], 0.3);
+      this.midiSounds.playChordNow(598, [this.calculateNote(pos)], 0.25);
       this.animateShark("shark-ooh", 3);
     } else if (e.keyCode === 32) {
-      this.midiSounds.playChordNow(1235, [70], 0.3);
+      this.midiSounds.playChordNow(1235, [70], 0.25);
       this.animateShark("shark-percussion", 1);
     }
   }
@@ -96,27 +94,42 @@ class App extends Component {
       this.setState({ status: "navigator.requestMIDIAccess undefined" });
     }
   }
+  handleSelectChange(e) {
+    this.setState({ selectValue: e.target.value });
+  }
   render() {
     return (
       <div className="App">
-        <div className="shark-container">
-          <img
-            src={blahaj_percussion}
-            alt="percussion"
-            className="shark-percussion"
-          />
-          <img src={blahaj_ooh} alt="ooh" className="shark-ooh" />
-          <img src={blahaj_ooh} alt="ooh" className="shark-ooh" />
-          <img src={blahaj_ooh_right} alt="ooh" className="shark-ooh" />
-          <img src={blahaj_ooh_right} alt="ooh" className="shark-ooh" />
-          <img
-            src={blahaj_percussion_right}
-            alt="percussion"
-            className="shark-percussion"
-          />
-        </div>
+        <header>
+          <h1>🎶 Blalalalahaj 🦈</h1>
+          <p>It Works like Virtual Piano, but with Blahajs</p>
+        </header>
+        <br />
+        <Sharks />
+        <select
+          value={this.state.selectValue}
+          onChange={(e) => this.handleSelectChange(e)}
+        >
+          {virtual_piano_sheets.map((data, i) => {
+            return <option value={i}>{data.name}</option>;
+          })}
+        </select>
+        <code
+          //not dangerous in this case
+          dangerouslySetInnerHTML={{
+            __html: virtual_piano_sheets[this.state.selectValue].sheet,
+          }}
+        />
         <footer>
-          Created for SharkHacks 2020 🦈🎶 Powered by
+          <p>
+            Created for SharkHacks 2020 🦈🎶
+            <br />
+            Love Sharks 🦈? Donate to
+            <a href="https://www.sharktrust.org/Listing/Category/donate">
+              Shark Trust
+            </a>
+            so that Blahajs and friends can continue singing 🎶
+          </p>
           <MIDISounds
             ref={(ref) => (this.midiSounds = ref)}
             appElementName="root"
